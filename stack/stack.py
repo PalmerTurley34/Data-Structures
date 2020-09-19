@@ -16,9 +16,9 @@ sys.path.append('singly_linked_list/')
 from singly_linked_list import Node, LinkedList
 
 class Stack:
-    def __init__(self, storage=LinkedList()):
+    def __init__(self):
         self.size = 0
-        self.storage = storage
+        self.storage = LinkedList()
 
     def __len__(self):
         return self.size
@@ -28,7 +28,7 @@ class Stack:
         self.size += 1
 
     def pop(self):
-        if self.__len__ == 0:
+        if self.size == 0:
             return None
         else:
             value = self.storage.tail.value
